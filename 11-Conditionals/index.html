@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>VueJS Net Ninja | Computed Properties</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  </head>
+  <body>
+    <div id="app">
+        <h1>Conditionals</h1>
+        <button v-on:click="error = !error">Toggle Error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+
+        <p v-if="error">There was an ERROR! :(</p>
+        <p v-else-if="success">Yass, much SUCCESS! :)</p>
+
+<!--        <p v-show="error">There was an ERROR! :(</p>-->
+<!--        <p v-show="success">Yass, much SUCCESS! :)</p>-->
+    </div>
+    <!-- built files will be auto injected -->
+    <script src="main.js"></script>
+  </body>
+</html>
