@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>VueJS Net Ninja | Computed Properties</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Multiple Vue Instances</h1>
+
+<div id="vue-app-one" style="background:deepskyblue; padding: 1rem; margin-bottom: 2rem">
+    <h1>{{title}}</h1>
+    <p>{{greet}}</p>
+</div>
+
+<div id="vue-app-two" style="background:coral; padding: 1rem;">
+    <h1>{{title}}</h1>
+    <p>{{greet}}</p>
+    <button v-on:click="changeVueOneTitle">Change Vue One's Title</button>
+    <input type="text" v-model="text">
+</div>
+<!-- built files will be auto injected -->
+<script src="app.js"></script>
+</body>
+</html>
