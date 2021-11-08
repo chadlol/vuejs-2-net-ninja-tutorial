@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 v-on:click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
@@ -8,13 +8,16 @@
 <script>
 
 export default {
-  data () {
-    return {
-      title: 'Hello Vue!'
+  props: {
+    title: {
+      type: String,
+      required: true,
     }
   },
   methods: {
-
+    changeTitle() {
+      this.title = 'Vue Wizards'
+    }
   }
 }
 </script>
