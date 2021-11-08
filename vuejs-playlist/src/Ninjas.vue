@@ -1,8 +1,12 @@
 <template>
-  <ul>
-    <li v-for="ninja in ninjas">{{ ninja }}</li>
-    <li><p>{{phrase}}</p></li>
-  </ul>
+  <div>
+    <h1>Nananananananana-Ninjas!</h1>
+    <ul>
+      <li v-for="ninja in ninjas">{{ ninja }}</li>
+      <li><p>{{phrase}}</p></li>
+    </ul>
+  </div>
+
 </template>
 
 <script>
@@ -18,5 +22,7 @@ export default {
 </script>
 
 <style scoped>
-
+  h1 {
+    color: purple;
+  }
 </style>
