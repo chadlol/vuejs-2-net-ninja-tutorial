@@ -1,18 +1,22 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <Ninjas></Ninjas>
-    <Chickens></Chickens>
+    <app-header></app-header>
+    <app-ninjas></app-ninjas>
+    <app-footer></app-footer>
   </div>
 </template>
 
 
 <script>
-import Chickens from './Chickens.vue'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Ninjas from './components/Ninjas'
 
 export default {
   components: {
-    'Chickens': Chickens,
+    'app-header': Header,
+    'app-footer': Footer,
+    'app-ninjas': Ninjas
   },
   data () {
     return {
