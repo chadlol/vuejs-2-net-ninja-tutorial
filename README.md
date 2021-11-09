@@ -34,7 +34,7 @@ Tracking my progress through Net Ninja's VueJS 2 tutorials on YouTube.
 - [x] 28
 - [x] 29
 - [x] 30
-- [ ] 31
+- [x] 31
 - [ ] 32
 - [ ] 33
 - [ ] 34
