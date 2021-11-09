@@ -1,33 +1,26 @@
 <template>
-  <form-helper>
-    <div slot="form-header">
-      <h2>Form Header</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi consequuntur corporis cupiditate deserunt dolore illo iste magni maxime, perspiciatis quam quo, saepe similique vero voluptatem. Consequatur molestiae quibusdam tempora.</p>
-    </div>
-
-    <div slot="form-fields">
-      <input type="text" placeholder="Name">
-      <input type="password" placeholder="Password">
-    </div>
-
-    <div slot="form-controls">
-      <button v-on:click="handleSubmit">Submit</button>
-    </div>
-  </form-helper>
-
+  <div>
+    <keep-alive>
+      <component v-bind:is="component"></component>
+    </keep-alive>
+    <button v-on:click="component = 'form-one'">Show form one</button>
+    <button v-on:click="component = 'form-two'">Show form two</button>
+  </div>
 </template>
 
 
 <script>
-import FormHelper from './components/FormHelper';
+import formOne from './components/formOne';
+import formTwo from './components/formTwo';
 
 export default {
   components: {
-    'form-helper': FormHelper,
+    'form-one': formOne,
+    'form-two': formTwo,
   },
   data () {
     return {
-      title: 'I am a dynamic slot title!'
+      component: 'form-one',
     }
   },
   methods: {
