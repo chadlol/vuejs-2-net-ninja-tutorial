@@ -1,12 +1,9 @@
 <template>
-  <div v-theme:column="themeType" id="show-blogs">
-    <h1>Show Blog Articles</h1>
+  <div v-theme:column="themeType" id="list-blogs">
+    <h1>List Blog Articles</h1>
     <input type="text" v-model="search" placeholder="Search...">
     <div v-for="blog in filteredBlogs" class="single-blog">
       <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
-      <article>
-        {{ blog.body | snippet }}
-      </article>
       <hr>
     </div>
   </div>
@@ -54,7 +51,7 @@ export default {
 </script>
 
 <style scoped>
- #show-blogs {
+ #list-blogs {
    max-width: 800px;
    margin: 1rem auto;
  }
