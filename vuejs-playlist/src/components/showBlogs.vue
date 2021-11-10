@@ -2,9 +2,9 @@
   <div v-theme:column="themeType" id="show-blogs">
     <h1>All Blog Articles</h1>
     <div v-for="blog in blogs" class="single-blog">
-      <h2 v-rainbow>{{ blog.title }}</h2>
+      <h2 v-rainbow>{{ blog.title | to-uppercase }}</h2>
       <article>
-        {{ blog.body }}
+        {{ blog.body | snippet }}
       </article>
       <hr>
     </div>

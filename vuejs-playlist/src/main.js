@@ -11,6 +11,16 @@ Vue.directive('rainbow', {
   }
 })
 
+// Filters
+
+Vue.filter('to-uppercase',
+    val => val.toUpperCase()
+);
+
+Vue.filter('snippet',
+  val => val.slice(0,100)
+);
+
 Vue.directive('theme', {
   bind(el, binding, vnode){
     let themeType = binding.value;
