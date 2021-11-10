@@ -4,23 +4,7 @@ import App from './App.vue'
 
 Vue.use(VueResource);
 
-// Custom Directives
-Vue.directive('rainbow', {
-  bind(el, binding, vnode){
-    el.style.color = '#' + Math.random().toString().slice(2,8);
-  }
-})
-
-// Filters
-
-Vue.filter('to-uppercase',
-    val => val.toUpperCase()
-);
-
-Vue.filter('snippet',
-  val => val.slice(0,100)
-);
-
+// Global Directives
 Vue.directive('theme', {
   bind(el, binding, vnode){
     let themeType = binding.value;

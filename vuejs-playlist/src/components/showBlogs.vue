@@ -25,7 +25,6 @@ export default {
   created() {
     this.$http.get('http://jsonplaceholder.typicode.com/posts').then(
       data => {
-        console.log(this);
         this.blogs = data.body.slice(0,10);
       }
     );
@@ -35,6 +34,21 @@ export default {
       return this.blogs.filter((blog) => {
         return blog.title.match(this.search);
       });
+    }
+  },
+  filters: {
+    toUppercase(val) {
+      return val.toUpperCase();
+    },
+    snippet(val) {
+      return val.slice(0,100);
+    }
+  },
+  directives: {
+    'rainbow': {
+      bind(el, binding, vnode){
+        el.style.color = '#' + Math.random().toString().slice(2,8);
+      }
     }
   }
 }
