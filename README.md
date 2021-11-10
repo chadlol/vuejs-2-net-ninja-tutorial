@@ -39,7 +39,7 @@ Tracking my progress through Net Ninja's VueJS 2 tutorials on YouTube.
 - [x] 33
 - [x] 34
 - [x] 35
-- [ ] 36
+- [x] 36
 - [ ] 37
 - [ ] 38
 - [ ] 39
