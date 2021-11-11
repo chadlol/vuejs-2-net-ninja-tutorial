@@ -58,11 +58,7 @@ export default {
   },
   methods: {
     post() {
-      this.$http.post('http://jsonplaceholder.typicode.com/posts', {
-        title: this.blog.title,
-        body: this.blog.content,
-        userId: 1
-      }).then(data => {
+      this.$http.post('https://net-ninja-vue-playlist-default-rtdb.firebaseio.com/posts.json', this.blog).then(data => {
         console.log(data);
         this.submitted = true;
       });
