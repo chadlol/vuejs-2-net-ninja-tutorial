@@ -9,7 +9,7 @@
       </router-link>
 
       <article>
-        {{ blog.body | snippet }}
+        {{ blog.content | snippet }}
       </article>
       <hr>
     </div>
@@ -29,11 +29,22 @@ export default {
   },
   methods: {},
   created() {
-    this.$http.get('http://jsonplaceholder.typicode.com/posts').then(
+    this.$http.get('https://net-ninja-vue-playlist-default-rtdb.firebaseio.com/posts.json')
+      .then(
       data => {
-        this.blogs = data.body.slice(0,10);
+        return data.json();
+        // this.blogs = data.body.slice(0,10);
       }
-    );
+    ).then(
+      data => {
+        var blogsArray = [];
+        for (let key in data) {
+          data[key].id = key;
+          blogsArray.push(data[key])
+        }
+        console.log(blogsArray);
+        this.blogs = blogsArray;
+      });
   },
   computed: {
 
